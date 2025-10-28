@@ -1,5 +1,7 @@
+# uvicorn main:app --reload 
 from fastapi import FastAPI
+from routes import router
 
 app = FastAPI()
 
-# unicorn main:app --reload
+app.include_router(router)
